@@ -40,7 +40,7 @@ end
 -- This function is called automatically from roslua.init_node() if required,
 -- so you should not call this function directly.
 function init_simtime()
-   sub_clock = roslua.subscriber("/clock", "roslib/Clock")
+   sub_clock = roslua.subscriber("/clock", "rosgraph_msgs/Clock")
    sub_clock.add_listener(simtime_update)
 end
 

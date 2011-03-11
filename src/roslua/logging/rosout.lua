@@ -41,7 +41,7 @@ end
 -- @return initialized rosout logger
 function get_logger()
    if not pub_rosout then
-      pub_rosout  = roslua.publisher("/rosout", "roslib/Log")
+      pub_rosout  = roslua.publisher("/rosout", "rosgraph_msgs/Log")
    end
    return log_rosout
 end

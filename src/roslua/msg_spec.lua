@@ -162,7 +162,7 @@ function MsgSpec:load_from_iterator(iterator)
       if line ~= "" then -- else comment or empty
 	 local ftype, fname = string.match(line, "^([%w_/%[%]]+)[%s]+([%w_%[%]]+)$")
 	 if ftype and fname then
-	    if ftype == "Header" then ftype = "roslib/Header" end
+	    if ftype == "Header" then ftype = "std_msgs/Header" end
 	    ftype = self:resolve_type(ftype)
 	    local msgspec = nil
 	    if not is_builtin_type(ftype) then
